@@ -1,0 +1,79 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+* {
+  margin: 0;
+  padding: 0%;
+  box-sizing: border-box;
+  font-family: "Poppins", "sans-serif";
+}
+
+header {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: start;
+  align-items: start;
+  gap: 10px;
+}
+header h2 {
+  padding-top: 10px;
+}
+header ul.menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 200px;
+  padding: 10px;
+  gap: 10px;
+}
+header ul.menu li {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 15px;
+  width: 100%;
+  padding: 10px 20px;
+  padding-left: 8px;
+  flex-grow: 1;
+}
+header ul.menu li img {
+  width: 25px;
+}
+header ul.menu li p {
+  font-size: 15px;
+  font-weight: 500;
+}
+header ul.menu li:hover, header ul.menu li.active {
+  background-color: rgb(138, 5, 239);
+  color: #ffffff;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+header ul.menu li:hover img, header ul.menu li.active img {
+  filter: invert(1);
+  -webkit-filter: invert(1);
+}
+
+@media screen and (max-width: 576px) {
+  header ul.menu {
+    padding: 5px;
+    width: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  header ul.menu li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+  }
+  header ul.menu li img {
+    width: 27px;
+  }
+  header ul.menu li p {
+    display: none;
+  }
+}/*# sourceMappingURL=style.css.map */
