@@ -20,17 +20,25 @@
   flex-direction: row-reverse;
   justify-content: start;
   align-items: start;
-  padding-left: 200px;
+  padding-left: 20px;
 }
 .app header h2 {
   padding-top: 10px;
 }
-.app .sidebar {
-  position: absolute;
-  top: 0;
-  left: 0;
+.app main {
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 5fr 0.2fr;
+  justify-content: center;
+  align-content: start;
 }
-.app .sidebar ul.menu {
+.app main .sidebar {
+  z-index: 1;
+  background-color: #ffffff;
+  height: 100%;
+}
+.app main .sidebar ul.menu {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -39,7 +47,7 @@
   padding: 10px;
   gap: 10px;
 }
-.app .sidebar ul.menu li {
+.app main .sidebar ul.menu li {
   display: flex;
   justify-content: start;
   align-items: center;
@@ -49,14 +57,14 @@
   padding-left: 8px;
   flex-grow: 1;
 }
-.app .sidebar ul.menu li img {
+.app main .sidebar ul.menu li img {
   width: 25px;
 }
-.app .sidebar ul.menu li p {
+.app main .sidebar ul.menu li p {
   font-size: 15px;
   font-weight: 500;
 }
-.app .sidebar ul.menu li:hover, .app .sidebar ul.menu li.active {
+.app main .sidebar ul.menu li:hover, .app main .sidebar ul.menu li.active {
   background-color: rgb(138, 5, 239);
   color: #ffffff;
   border-radius: 10px;
@@ -65,77 +73,105 @@
   -ms-border-radius: 10px;
   -o-border-radius: 10px;
 }
-.app .sidebar ul.menu li:hover img, .app .sidebar ul.menu li.active img {
+.app main .sidebar ul.menu li:hover img, .app main .sidebar ul.menu li.active img {
   filter: invert(1);
   -webkit-filter: invert(1);
 }
-.app main {
-  position: absolute;
-  left: 60px;
+.app main section .staffs-container {
   width: 100%;
-  height: 100%;
-  border-left: 1px solid rgb(209, 209, 209);
-}
-.app main .home {
-  background-color: #f1f1f1;
-  width: 90%;
-  height: 90%;
-  display: flex;
-  justify-content: center;
-  align-items: start;
-}
-.app main .home .home-body {
-  width: 100%;
-  height: 100%;
+  height: 50%;
+  overflow: hidden;
+  overflow-y: scroll;
+  scrollbar-width: none;
+  gap: 5px;
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
+  flex-wrap: wrap;
 }
-.app main .home .home-body img {
-  width: 150px;
+.app main section .staffs-container .card {
+  gap: 10px;
+  width: 180px;
+  padding: 10px;
+  border: 1px solid rgb(240, 240, 240);
+  display: flex;
+  border-radius: 10px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+.app main section .staffs-container .card img {
+  width: 100px;
   border-radius: 50%;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   -ms-border-radius: 50%;
   -o-border-radius: 50%;
 }
-.app main .home .home-body .my-info {
+.app main section .staffs-container .staff-info {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  text-align: center;
 }
-.app main .home .home-body .my-info ul {
-  list-style: none;
-  text-align: justify;
+.app main section .staffs-container button {
+  width: 100%;
+  border: none;
+  text-transform: uppercase;
+  background-color: #e3e3e3;
+  height: 30px;
+}
+.app main section .staffs-container button:hover {
+  background-color: rgb(138, 5, 239);
+  color: #ffffff;
+}
+.app main .right-sidebar {
+  height: 100%;
+}
+.app main .right-sidebar .tab_bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 150px;
   padding: 10px;
+  gap: 10px;
 }
-.app main .home .home-body .my-info ul li {
-  text-indent: 15px;
-  padding: 10px 5px;
+.app main .right-sidebar .tab_bar div {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 15px;
+  width: 100%;
+  padding: 10px 20px;
+  padding-left: 8px;
+  flex-grow: 1;
 }
-@media screen and (max-width: 576px) {
-  .app header {
-    padding-left: 60px;
-  }
-  .app .sidebar ul.menu {
-    padding: 5px;
-    width: 60px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .app .sidebar ul.menu li {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 10px;
-  }
-  .app .sidebar ul.menu li img {
-    width: 27px;
-  }
-  .app .sidebar ul.menu li p {
-    display: none;
-  }
+.app main .right-sidebar .tab_bar div img {
+  width: 25px;
+}
+.app main .right-sidebar .tab_bar div p {
+  font-size: 15px;
+  font-weight: 500;
+}
+.app main .right-sidebar .tab_bar div:hover, .app main .right-sidebar .tab_bar div.active {
+  background-color: rgb(138, 5, 239);
+  color: #ffffff;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+.app main .right-sidebar .tab_bar div:hover img, .app main .right-sidebar .tab_bar div.active img {
+  filter: invert(1);
+  -webkit-filter: invert(1);
 }/*# sourceMappingURL=style.css.map */
