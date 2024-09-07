@@ -1,63 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-</head>
-<body>
-    <header>
-        <h2>Dashboard Sidebar</h2>
-        <div class="sidebar">
-            <ul class="menu">
-                <li class="active">
-                    <img src="./icons/home.svg" alt="Home Icon">
-                    <p>Home</p>
-                </li>
-                <li>
-                    <img src="./icons/skills.svg" alt="Skills Icon">
-                    <p>Skills</p>
-                </li>
-                <li>
-                    <img src="./icons/projects.svg" alt="Projects Icon">
-                    <p>Projects</p>
-                </li>
-                <li>
-                    <img src="./icons/education.svg" alt="Education Icon">
-                    <p>Education</p>
-                </li>
-                <li>
-                    <img src="./icons/resume.svg" alt="Resume Icon">
-                    <p>Resume / CV</p>
-                </li>
-                <li>
-                    <img src="./icons/about.svg" alt="About Icon">
-                    <p>About Me</p>
-                </li>
-                <li>
-                    <img src="./icons/message.svg" alt="Contact Icon">
-                    <p>Contact Me</p>
-                </li>
-                <li>
-                    <img src="./icons/linkedIn.svg" alt="Contact Icon">
-                    <p>LinkedIn</p>
-                </li>
-                <li>
-                    <img src="./icons/sun.svg" alt="Contact Icon">
-                    <p>Theme</p>
-                </li>
-                <li>
-                    <img src="./icons/fullScreen.svg" alt="Contact Icon">
-                    <p>Full Screen</p>
-                </li>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div class="app">
+      <header>
+        <h2>Portfolio</h2>
+      </header>
+      <div class="sidebar">
+        <ul class="menu">
+          <li class="active">
+            <img src="./icons/home.svg" alt="Home Icon" />
+            <p>Home</p>
+          </li>
+          <li>
+            <img src="./icons/skills.svg" alt="Skills Icon" />
+            <p>Skills</p>
+          </li>
+          <li>
+            <img src="./icons/projects.svg" alt="Projects Icon" />
+            <p>Projects</p>
+          </li>
+          <li>
+            <img src="./icons/education.svg" alt="Education Icon" />
+            <p>Education</p>
+          </li>
+          <li>
+            <img src="./icons/resume.svg" alt="Resume Icon" />
+            <p>Resume / CV</p>
+          </li>
+          <li>
+            <img src="./icons/about.svg" alt="About Icon" />
+            <p>About Me</p>
+          </li>
+          <li>
+            <img src="./icons/message.svg" alt="Contact Icon" />
+            <p>Contact Me</p>
+          </li>
+          <li>
+            <img src="./icons/linkedIn.svg" alt="Contact Icon" />
+            <p>LinkedIn</p>
+          </li>
+          <li>
+            <img src="./icons/sun.svg" alt="Contact Icon" />
+            <p>Theme</p>
+          </li>
+          <li>
+            <img src="./icons/fullScreen.svg" alt="Contact Icon" />
+            <p>Full Screen</p>
+          </li>
+        </ul>
+      </div>
+      <main>
+        <section class="home">
+          <div class="home-body">
+            <img src="./20231113_183435-removebg.png" alt="" />
+            <div class="my-info">
+              <h1>Naveen V</h1>
+              <b>Full Stack Developer</b>
 
-            </ul>
-        </div>
-        
-    </header>
-    
+              <ul>
+                <li>
+                  Full-stack developer with experience in both front-end and
+                  back-end technologies
+                </li>
+                <li>Skilled at creating seamless, user-friendly interfaces</li>
+                <li>
+                  Expertise in building dynamic, responsive web applications
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+        <section class="skills"></section>
+        <section class="projects"></section>
+        <section class="education"></section>
+        <section class="resume"></section>
+        <section class="about"></section>
+        <section class="contact"></section>
+      </main>
+    </div>
+
     <script type="text/javascript" src="script.js"></script>
-</body>
+  </body>
 </html>
